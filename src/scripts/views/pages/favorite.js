@@ -13,10 +13,9 @@ const Favorite = {
   },
 
   async afterRender() {
-    
     const restaurant = await FavoriteRestaurantIdb.getAllRestaurants();
     if (restaurant.length === 0) {
-      document.querySelector('.content').innerHTML = '<h1 class="text-center">Tidak ada restaurant favorite</h1>';
+      document.querySelector('.content').innerHTML = '<h1 class="text-center">Tidak ada restaurant favorite ):</h1>';
     }
 
     const restaurantContainer = document.querySelector('#restaurants');

@@ -25,7 +25,8 @@
         "linebreak-style": 0,
         "no-shadow": "off",
         "consistent-return": 0,
-        "no-prototype-builtins": 0
+        "no-prototype-builtins": 0,
+        "no-trailing-whitespace": 0
         
     },
     "plugins": ["jasmine", "codeceptjs"]

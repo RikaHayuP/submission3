@@ -31,6 +31,11 @@ module.exports = function(config) {
       "specs/**/*Spec.js": ["webpack", "sourcemap"],
     },
 
+    webpack: {
+      devtool: 'inline-source-map',
+      mode: 'development',
+    },
+
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
