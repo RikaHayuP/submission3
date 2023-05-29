@@ -13,10 +13,9 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
 
-    // list of files / patterns to load in the browser
+    // list of files / patterns to load in the browser,
     files: [
-      '*.js',
-      'test/**/*.js'
+      'specs/**/*Spec.js',
     ],
 
 
@@ -28,12 +27,22 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
-      "specs/**/*Spec.js": ["webpack", "sourcemap"],
+      'specs/**/*Spec.js': ['webpack', 'sourcemap'],
     },
 
     webpack: {
+      // karma watches the test entry points
+      // (you don't need to specify the entry option)
+      // webpack watches dependencies
+      // webpack configuration
       devtool: 'inline-source-map',
       mode: 'development',
+    },
+
+    webpackMiddleware: {
+      // webpack-dev-middleware configuration
+      // i. e.
+      stats: 'errors-only',
     },
 
 

@@ -52,7 +52,7 @@ describe('Liking A Restaurant', () => {
           await TestFactories.createLikeButtonPresenterWithRestaurant({  });
         
             document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-            expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
+            expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
           });
 
   });
